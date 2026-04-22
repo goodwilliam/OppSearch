@@ -1,0 +1,7 @@
+sources:
+  - name: fractionaljobs
+    url: https://www.fractionaljobs.io/
+    method: html
+    categories:
+      - Design
+      - Product

@@ -1,0 +1,33 @@
+name: Daily Scrape
+
+on:
+  schedule:
+    - cron: "0 8 * * *"  # 8am UTC daily
+  workflow_dispatch:       # manual trigger from GitHub UI
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run scraper
+        run: python scraper.py
+
+      - name: Commit and push results
+        run: |
+          git config user.name "OppSearch Bot"
+          git config user.email "bot@oppsearch"
+          git add docs/data/
+          git diff --cached --quiet || git commit -m "scrape: $(date -u '+%Y-%m-%d')"
+          git push
