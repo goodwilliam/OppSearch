@@ -19,10 +19,12 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests beautifulsoup4
+        run: pip install requests beautifulsoup4 cloudscraper
 
-      - name: Run scraper
-        run: python scraper.py
+      - name: Run scrapers
+        run: |
+          python scraper.py
+          python scraper_gofractional.py
 
       - name: Commit and push results
         run: |
