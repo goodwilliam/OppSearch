@@ -186,7 +186,11 @@
 
     <div class="toolbar">
       <div class="toggle-group">
-        <button class="active" onclick="setType('all', this)">All</button>
+        <button class="active" onclick="setRemote('remote', this)">Remote</button>
+        <button onclick="setRemote('all', this)">All locations</button>
+      </div>
+      <div class="toggle-group">
+        <button class="active" onclick="setType('all', this)">All types</button>
         <button onclick="setType('flex', this)">Contract &amp; Part-time</button>
         <button onclick="setType('fulltime', this)">Full-time</button>
       </div>
@@ -206,6 +210,7 @@
   <script>
     let allJobs = [];
     let typeFilter = "all";
+    let remoteFilter = "remote";
 
     function formatDate(iso) {
       const d = new Date(iso + "T12:00:00Z");
@@ -224,11 +229,24 @@
       return map[t] || t;
     }
 
-    function setType(val, btn) {
-      typeFilter = val;
-      document.querySelectorAll(".toggle-group button").forEach(b => b.classList.remove("active"));
+    function setRemote(val, btn) {
+      remoteFilter = val;
+      btn.parentElement.querySelectorAll("button").forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
       render();
+    }
+
+    function setType(val, btn) {
+      typeFilter = val;
+      btn.parentElement.querySelectorAll("button").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      render();
+    }
+
+    // Detect remote from location string (covers existing data without remote field)
+    function jobIsRemote(j) {
+      if (j.remote !== undefined && j.remote !== null) return j.remote;
+      return j.location ? j.location.toLowerCase().includes("remote") : false;
     }
 
     function render() {
@@ -238,6 +256,7 @@
       const FLEX_TYPES = new Set(["contract", "part-time", "fractional"]);
 
       const filtered = allJobs.filter(j => {
+        if (remoteFilter === "remote" && !jobIsRemote(j)) return false;
         if (typeFilter === "flex" && !FLEX_TYPES.has(j.employment_type)) return false;
         if (typeFilter === "fulltime" && j.employment_type !== "full-time") return false;
         if (platform && j.platform !== platform) return false;
@@ -258,6 +277,7 @@
           <div class="card-company">${j.company}</div>
           <div class="card-meta">
             <span class="pill pill-type-${j.employment_type}">${typeLabel(j.employment_type)}</span>
+            ${jobIsRemote(j) ? `<span class="pill" style="background:#e8f4fd;color:#0a6fa8">Remote</span>` : ""}
             ${j.location ? `<span class="pill pill-location">${j.location}</span>` : ""}
             <span class="pill pill-platform">${j.platform}</span>
           </div>

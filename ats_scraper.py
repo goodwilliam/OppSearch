@@ -34,6 +34,12 @@ def is_relevant(title):
     return bool(KEYWORD_PATTERN.search(title))
 
 
+def is_remote(location):
+    if not location:
+        return None
+    return "remote" in location.lower()
+
+
 def normalize_type(raw):
     if not raw:
         return "unknown"
@@ -81,11 +87,13 @@ def fetch_lever(company):
             title = j.get("text", "")
             if not is_relevant(title):
                 continue
+            location = j.get("categories", {}).get("location", "")
             jobs.append({
                 "id": f"lever:{company}:{j['id']}",
                 "title": title,
                 "company": j.get("company") or company,
-                "location": j.get("categories", {}).get("location", ""),
+                "location": location,
+                "remote": is_remote(location),
                 "employment_type": normalize_type(j.get("categories", {}).get("commitment", "")),
                 "url": j.get("hostedUrl") or f"https://jobs.lever.co/{company}/{j['id']}",
                 "platform": "lever",
@@ -108,11 +116,13 @@ def fetch_greenhouse(company):
             title = j.get("title", "")
             if not is_relevant(title):
                 continue
+            location = j.get("location", {}).get("name", "")
             jobs.append({
                 "id": f"greenhouse:{company}:{j['id']}",
                 "title": title,
                 "company": company,
-                "location": j.get("location", {}).get("name", ""),
+                "location": location,
+                "remote": is_remote(location),
                 "employment_type": "unknown",
                 "url": j.get("absolute_url", ""),
                 "platform": "greenhouse",
@@ -165,11 +175,13 @@ def fetch_ashby(company):
             title = j.get("title", "")
             if not is_relevant(title):
                 continue
+            location = j.get("locationName", "")
             jobs.append({
                 "id": f"ashby:{company}:{j['id']}",
                 "title": title,
                 "company": company,
-                "location": j.get("locationName", ""),
+                "location": location,
+                "remote": is_remote(location),
                 "employment_type": normalize_type(j.get("employmentType", "")),
                 "url": j.get("externalLink") or f"https://jobs.ashbyhq.com/{company}/{j['id']}",
                 "platform": "ashby",

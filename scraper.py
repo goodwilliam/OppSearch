@@ -28,6 +28,12 @@ def is_relevant(title):
     return bool(KEYWORD_PATTERN.search(title))
 
 
+def is_remote(location):
+    if not location:
+        return None
+    return "remote" in location.lower()
+
+
 def load_json(path, default):
     if os.path.exists(path):
         with open(path) as f:
@@ -88,6 +94,7 @@ def scrape_fractionaljobs():
             "hours": hours,
             "rate": rate,
             "location": location,
+            "remote": is_remote(location),
             "posted": posted,
             "source": SOURCE_NAME,
         })
