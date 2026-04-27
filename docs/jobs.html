@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f5f5f3;
+      color: #111;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 0 32px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    header span { font-size: 15px; font-weight: 600; letter-spacing: -0.3px; }
+
+    nav a {
+      color: #888;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.15s;
+    }
+    nav a:hover { color: #fff; }
+    nav a.active { color: #fff; }
+
+    .container { max-width: 980px; margin: 0 auto; padding: 40px 24px; }
+
+    h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 4px; }
+    .subtitle { font-size: 14px; color: #666; margin-bottom: 24px; }
+
+    .toolbar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    select, input[type="text"] {
+      height: 36px;
+      padding: 0 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 14px;
+      background: #fff;
+      color: #111;
+      outline: none;
+    }
+    select:focus, input[type="text"]:focus { border-color: #111; }
+    input[type="text"] { width: 200px; }
+
+    .toggle-group {
+      display: flex;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .toggle-group button {
+      height: 36px;
+      padding: 0 14px;
+      border: none;
+      background: #fff;
+      font-size: 13px;
+      cursor: pointer;
+      color: #555;
+      transition: background 0.12s, color 0.12s;
+      white-space: nowrap;
+    }
+    .toggle-group button.active { background: #111; color: #fff; }
+    .toggle-group button + button { border-left: 1px solid #ddd; }
+
+    .result-count { font-size: 13px; color: #888; margin-left: auto; }
+
+    .cards { display: flex; flex-direction: column; gap: 10px; }
+
+    .card {
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 10px;
+      padding: 18px 22px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3px 16px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+      grid-column: 1;
+    }
+
+    .card-company {
+      font-size: 13px;
+      color: #555;
+      grid-column: 1;
+      margin-bottom: 8px;
+    }
+
+    .card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      grid-column: 1;
+      align-items: center;
+    }
+
+    .pill {
+      border-radius: 20px;
+      padding: 3px 10px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .pill-type-contract, .pill-type-part-time, .pill-type-fractional {
+      background: #edfaf3;
+      color: #1a7f4b;
+    }
+    .pill-type-full-time { background: #e8f0fe; color: #1a56c4; }
+    .pill-type-internship { background: #fff8e1; color: #9a6700; }
+    .pill-type-unknown { background: #f0f0ee; color: #666; }
+
+    .pill-platform { background: #f0f0ee; color: #444; }
+    .pill-location { background: #f0f0ee; color: #444; }
+
+    .card-right {
+      grid-column: 2;
+      grid-row: 1 / 4;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+
+    .date-added { font-size: 12px; color: #999; white-space: nowrap; }
+
+    .btn {
+      display: inline-block;
+      background: #111;
+      color: #fff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 7px 16px;
+      border-radius: 6px;
+      transition: background 0.15s;
+      white-space: nowrap;
+    }
+    .btn:hover { background: #333; }
+
+    .empty {
+      text-align: center;
+      padding: 80px 24px;
+      color: #999;
+      font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <span>OppSearch</span>
+    <nav>
+      <a href="index.html">Opportunities</a>
+      &nbsp;&nbsp;
+      <a href="jobs.html" class="active">Jobs</a>
+      &nbsp;&nbsp;
+      <a href="raw.html">Raw data</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Jobs</h1>
+    <p class="subtitle">Design roles from 1,000+ companies via Lever, Ashby & Greenhouse. <span id="count">—</span> total.</p>
+
+    <div class="toolbar">
+      <div class="toggle-group">
+        <button class="active" onclick="setType('all', this)">All</button>
+        <button onclick="setType('flex', this)">Contract &amp; Part-time</button>
+        <button onclick="setType('fulltime', this)">Full-time</button>
+      </div>
+      <select id="platformFilter">
+        <option value="">All platforms</option>
+        <option value="lever">Lever</option>
+        <option value="ashby">Ashby</option>
+        <option value="greenhouse">Greenhouse</option>
+      </select>
+      <input type="text" id="search" placeholder="Search title or company…">
+      <span class="result-count" id="resultCount"></span>
+    </div>
+
+    <div class="cards" id="cards"></div>
+  </div>
+
+  <script>
+    let allJobs = [];
+    let typeFilter = "all";
+
+    function formatDate(iso) {
+      const d = new Date(iso + "T12:00:00Z");
+      return d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+    }
+
+    function typeLabel(t) {
+      const map = {
+        "full-time": "Full-time",
+        "part-time": "Part-time",
+        "contract": "Contract",
+        "fractional": "Fractional",
+        "internship": "Internship",
+        "unknown": "Unknown",
+      };
+      return map[t] || t;
+    }
+
+    function setType(val, btn) {
+      typeFilter = val;
+      document.querySelectorAll(".toggle-group button").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      render();
+    }
+
+    function render() {
+      const platform = document.getElementById("platformFilter").value;
+      const search = document.getElementById("search").value.toLowerCase();
+
+      const FLEX_TYPES = new Set(["contract", "part-time", "fractional"]);
+
+      const filtered = allJobs.filter(j => {
+        if (typeFilter === "flex" && !FLEX_TYPES.has(j.employment_type)) return false;
+        if (typeFilter === "fulltime" && j.employment_type !== "full-time") return false;
+        if (platform && j.platform !== platform) return false;
+        if (search && !j.title.toLowerCase().includes(search) && !j.company.toLowerCase().includes(search)) return false;
+        return true;
+      });
+
+      document.getElementById("resultCount").textContent = `${filtered.length} of ${allJobs.length}`;
+
+      if (!filtered.length) {
+        document.getElementById("cards").innerHTML = '<div class="empty">No results.</div>';
+        return;
+      }
+
+      document.getElementById("cards").innerHTML = filtered.map(j => `
+        <div class="card">
+          <div class="card-title">${j.title}</div>
+          <div class="card-company">${j.company}</div>
+          <div class="card-meta">
+            <span class="pill pill-type-${j.employment_type}">${typeLabel(j.employment_type)}</span>
+            ${j.location ? `<span class="pill pill-location">${j.location}</span>` : ""}
+            <span class="pill pill-platform">${j.platform}</span>
+          </div>
+          <div class="card-right">
+            <div class="date-added">Found ${formatDate(j.date_scraped)}</div>
+            <a class="btn" href="${j.url}" target="_blank" rel="noopener">Apply →</a>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    fetch("data/jobs.json")
+      .then(r => r.json())
+      .then(jobs => {
+        allJobs = jobs;
+        document.getElementById("count").textContent = jobs.length;
+        document.getElementById("platformFilter").addEventListener("change", render);
+        document.getElementById("search").addEventListener("input", render);
+        render();
+      });
+  </script>
+</body>
+</html>
