@@ -1,5 +1,71 @@
 [
   {
+    "id": "lever:ciandt:6aca8a27-ca98-497d-89bd-afe21b9fcfa6",
+    "title": "[Job-28779] Graphic Designer",
+    "company": "ciandt",
+    "location": "Brazil",
+    "remote": false,
+    "employment_type": "unknown",
+    "url": "https://jobs.lever.co/ciandt/6aca8a27-ca98-497d-89bd-afe21b9fcfa6",
+    "platform": "lever",
+    "date_scraped": "2026-04-28"
+  },
+  {
+    "id": "lever:ciandt:11b6efed-fb3f-40a1-8d85-69a6e394dfdc",
+    "title": "[Job-28780] Senior UX/UI Designer",
+    "company": "ciandt",
+    "location": "Brazil",
+    "remote": false,
+    "employment_type": "unknown",
+    "url": "https://jobs.lever.co/ciandt/11b6efed-fb3f-40a1-8d85-69a6e394dfdc",
+    "platform": "lever",
+    "date_scraped": "2026-04-28"
+  },
+  {
+    "id": "lever:insomniacookies:efab609a-2763-4e5f-88ff-b1c43c5310c6",
+    "title": "Creative Director",
+    "company": "insomniacookies",
+    "location": "Philadelphia PA (Center City HQ)",
+    "remote": false,
+    "employment_type": "full-time",
+    "url": "https://jobs.lever.co/insomniacookies/efab609a-2763-4e5f-88ff-b1c43c5310c6",
+    "platform": "lever",
+    "date_scraped": "2026-04-28"
+  },
+  {
+    "id": "lever:shieldai:6c140531-db2d-4fdf-8055-a4418a9d262b",
+    "title": "Senior Human Machine Interface Designer (R4854)",
+    "company": "shieldai",
+    "location": "Dallas, Texas",
+    "remote": false,
+    "employment_type": "full-time",
+    "url": "https://jobs.lever.co/shieldai/6c140531-db2d-4fdf-8055-a4418a9d262b",
+    "platform": "lever",
+    "date_scraped": "2026-04-28"
+  },
+  {
+    "id": "lever:wattpad:6fd68ef9-79bd-44e2-b963-d6a51977eb80",
+    "title": "Associate Visual Designer (Freelance)",
+    "company": "wattpad",
+    "location": "El Segundo, California",
+    "remote": false,
+    "employment_type": "contract",
+    "url": "https://jobs.lever.co/wattpad/6fd68ef9-79bd-44e2-b963-d6a51977eb80",
+    "platform": "lever",
+    "date_scraped": "2026-04-28"
+  },
+  {
+    "id": "greenhouse:hugeinc:7811866",
+    "title": "Senior UI Engineer",
+    "company": "hugeinc",
+    "location": "Colombia",
+    "remote": false,
+    "employment_type": "unknown",
+    "url": "https://job-boards.greenhouse.io/hugeinc/jobs/7811866",
+    "platform": "greenhouse",
+    "date_scraped": "2026-04-28"
+  },
+  {
     "id": "lever:Anlatan:471b91b6-0288-4f0c-88a5-84cf24fd23be",
     "title": "UI Designer [NovelAI]",
     "company": "Anlatan",
