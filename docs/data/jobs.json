@@ -1,5 +1,93 @@
 [
   {
+    "id": "lever:CesiumAstro:8352a14f-4add-4c1b-b5a2-989493d86bad",
+    "title": "CAD Designer I",
+    "company": "CesiumAstro",
+    "location": "Austin, TX",
+    "remote": false,
+    "employment_type": "full-time",
+    "url": "https://jobs.lever.co/CesiumAstro/8352a14f-4add-4c1b-b5a2-989493d86bad",
+    "platform": "lever",
+    "date_scraped": "2026-04-29"
+  },
+  {
+    "id": "lever:cogentanalytics:9a615cf8-2cc3-4665-88ce-0b0e5a00e5e1",
+    "title": "CAD Designer",
+    "company": "cogentanalytics",
+    "location": "Zionsville, IN",
+    "remote": false,
+    "employment_type": "full-time",
+    "url": "https://jobs.lever.co/cogentanalytics/9a615cf8-2cc3-4665-88ce-0b0e5a00e5e1",
+    "platform": "lever",
+    "date_scraped": "2026-04-29"
+  },
+  {
+    "id": "lever:spotify:0efed556-ce1a-455f-8ffc-2e11750ad2c5",
+    "title": "Senior Machine Learning Engineer - Generative UI Platform",
+    "company": "spotify",
+    "location": "Stockholm",
+    "remote": false,
+    "employment_type": "full-time",
+    "url": "https://jobs.lever.co/spotify/0efed556-ce1a-455f-8ffc-2e11750ad2c5",
+    "platform": "lever",
+    "date_scraped": "2026-04-29"
+  },
+  {
+    "id": "lever:spotify:a2e1e963-c44e-40a9-aa09-38bb44b5ae32",
+    "title": "Senior Product Designer - Platform Design",
+    "company": "spotify",
+    "location": "London",
+    "remote": false,
+    "employment_type": "full-time",
+    "url": "https://jobs.lever.co/spotify/a2e1e963-c44e-40a9-aa09-38bb44b5ae32",
+    "platform": "lever",
+    "date_scraped": "2026-04-29"
+  },
+  {
+    "id": "greenhouse:gomotive:8512374002",
+    "title": "Senior Manager, Product Design",
+    "company": "gomotive",
+    "location": "Hybrid - Bangalore",
+    "remote": false,
+    "employment_type": "unknown",
+    "url": "https://job-boards.greenhouse.io/gomotive/jobs/8512374002",
+    "platform": "greenhouse",
+    "date_scraped": "2026-04-29"
+  },
+  {
+    "id": "greenhouse:sonyinteractiveentertainmentglobal:5983976004",
+    "title": "Senior Combat Designer",
+    "company": "sonyinteractiveentertainmentglobal",
+    "location": "United States, Santa Monica, CA",
+    "remote": false,
+    "employment_type": "unknown",
+    "url": "https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/5983976004",
+    "platform": "greenhouse",
+    "date_scraped": "2026-04-29"
+  },
+  {
+    "id": "greenhouse:thenewyorktimes:4689783005",
+    "title": "Art Director, Visuals",
+    "company": "thenewyorktimes",
+    "location": "New York, NY",
+    "remote": false,
+    "employment_type": "unknown",
+    "url": "https://job-boards.greenhouse.io/thenewyorktimes/jobs/4689783005",
+    "platform": "greenhouse",
+    "date_scraped": "2026-04-29"
+  },
+  {
+    "id": "greenhouse:thenewyorktimes:4689185005",
+    "title": "Senior Product Designer, Growth",
+    "company": "thenewyorktimes",
+    "location": "New York, NY",
+    "remote": false,
+    "employment_type": "unknown",
+    "url": "https://job-boards.greenhouse.io/thenewyorktimes/jobs/4689185005",
+    "platform": "greenhouse",
+    "date_scraped": "2026-04-29"
+  },
+  {
     "id": "lever:ciandt:6aca8a27-ca98-497d-89bd-afe21b9fcfa6",
     "title": "[Job-28779] Graphic Designer",
     "company": "ciandt",
