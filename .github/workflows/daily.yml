@@ -26,6 +26,7 @@ jobs:
           python scraper.py
           python scraper_gofractional.py
           python ats_scraper.py
+          python scraper_hn.py
 
       - name: Commit and push results
         run: |
