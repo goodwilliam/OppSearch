@@ -1,5 +1,49 @@
 [
   {
+    "id": "greenhouse:alphasense:8530664002",
+    "title": "Senior/Staff Product Designer",
+    "company": "alphasense",
+    "location": "New York, New York, United States; Remote - United States",
+    "remote": true,
+    "employment_type": "unknown",
+    "url": "https://job-boards.greenhouse.io/alphasense/jobs/8530664002",
+    "platform": "greenhouse",
+    "date_scraped": "2026-04-30"
+  },
+  {
+    "id": "greenhouse:oliverseapac:7857611",
+    "title": "Associate Creative Director (Copy)",
+    "company": "oliverseapac",
+    "location": "Manila, Philippines",
+    "remote": false,
+    "employment_type": "unknown",
+    "url": "https://job-boards.greenhouse.io/oliverseapac/jobs/7857611",
+    "platform": "greenhouse",
+    "date_scraped": "2026-04-30"
+  },
+  {
+    "id": "greenhouse:pomelocare:5984777004",
+    "title": "Senior Brand Designer",
+    "company": "pomelocare",
+    "location": "United States",
+    "remote": false,
+    "employment_type": "unknown",
+    "url": "https://job-boards.greenhouse.io/pomelocare/jobs/5984777004",
+    "platform": "greenhouse",
+    "date_scraped": "2026-04-30"
+  },
+  {
+    "id": "greenhouse:sonyinteractiveentertainmentglobal:5633187004",
+    "title": "Senior Game Designer (Combat)",
+    "company": "sonyinteractiveentertainmentglobal",
+    "location": "United States, Santa Monica, CA",
+    "remote": false,
+    "employment_type": "unknown",
+    "url": "https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/5633187004",
+    "platform": "greenhouse",
+    "date_scraped": "2026-04-30"
+  },
+  {
     "id": "lever:CesiumAstro:8352a14f-4add-4c1b-b5a2-989493d86bad",
     "title": "CAD Designer I",
     "company": "CesiumAstro",
