@@ -12,19 +12,18 @@ DATA_DIR = "docs/data"
 HN_JOBS_FILE = os.path.join(DATA_DIR, "hn_jobs.json")
 HN_SEEN_FILE = os.path.join(DATA_DIR, "hn_seen.json")
 
-DESIGN_KEYWORDS = ["designer", "ux", "ui", "fractional", "creative director",
-                   "art director", "head of design", "design lead", "design director",
-                   "design manager", "visual design", "motion design", "brand design",
-                   "product design", "design systems", "user experience", "user interface"]
-
 REMOTE_KEYWORDS = ["remote", "anywhere", "distributed", "wfh", "work from home"]
 
+# Match in first line only — covers "UX Designer", "Brand Designers", "Creative Director" etc.
 DESIGN_PATTERN = re.compile(
-    r"\b(" + "|".join(re.escape(k) for k in DESIGN_KEYWORDS) + r")\b",
+    r"\bdesigners?\b|creative[\s\-]?director|art[\s\-]?director"
+    r"|head[\s\-]of[\s\-]design|design[\s\-]lead|design[\s\-]director"
+    r"|design[\s\-]manager|\bux[\s/\-]?designer|\bui[\s/\-]?designer"
+    r"|\bproduct[\s\-]designer|\bbrand[\s\-]designer",
     re.IGNORECASE,
 )
 REMOTE_PATTERN = re.compile(
-    r"\b(" + "|".join(re.escape(k) for k in REMOTE_KEYWORDS) + r")\b",
+    "|".join(re.escape(k) for k in REMOTE_KEYWORDS),
     re.IGNORECASE,
 )
 
@@ -88,16 +87,15 @@ def parse_comment(comment, thread_title):
     if not raw_html:
         return None
 
-    # Strip HTML to plain text for keyword matching
+    # Strip HTML to plain text
     plain = BeautifulSoup(raw_html, "html.parser").get_text(" ", strip=True)
 
-    if not DESIGN_PATTERN.search(plain):
+    # Only match design keywords in the first line (company | role | location)
+    first_line = plain.split("\n")[0][:200].strip()
+    if not DESIGN_PATTERN.search(first_line):
         return None
     if not REMOTE_PATTERN.search(plain):
         return None
-
-    # First line usually has company | role | location format
-    first_line = plain.split("\n")[0][:200].strip()
 
     # Parse timestamp
     ts = comment.get("time", 0)
@@ -108,7 +106,6 @@ def parse_comment(comment, thread_title):
         "comment_id": comment["id"],
         "thread_title": thread_title,
         "first_line": first_line,
-        "text": plain[:600],
         "url": f"https://news.ycombinator.com/item?id={comment['id']}",
         "posted": posted,
         "remote": True,

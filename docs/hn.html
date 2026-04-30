@@ -210,7 +210,6 @@
             <div class="card-firstline">${escHtml(j.first_line)}</div>
             <div class="card-date">${j.posted ? formatDate(j.posted) : ""}</div>
           </div>
-          <div class="card-text">${escHtml(j.text)}</div>
           <div class="card-footer">
             <div style="display:flex;gap:6px;flex-wrap:wrap">
               <span class="thread-badge">${escHtml(j.thread_title)}</span>
@@ -233,7 +232,7 @@
     fetch("data/hn_jobs.json")
       .then(r => r.json())
       .then(jobs => {
-        allJobs = jobs;
+        allJobs = jobs.sort((a, b) => (b.posted || "").localeCompare(a.posted || ""));
         document.getElementById("resultCount").textContent = `${jobs.length} of ${jobs.length}`;
         document.getElementById("search").addEventListener("input", render);
         render();
