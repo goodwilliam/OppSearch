@@ -90,12 +90,13 @@ def parse_comment(comment, thread_title):
     # Strip HTML to plain text
     plain = BeautifulSoup(raw_html, "html.parser").get_text(" ", strip=True)
 
-    # Only match design keywords in the first line (company | role | location)
-    first_line = plain.split("\n")[0][:200].strip()
-    if not DESIGN_PATTERN.search(first_line):
+    # Search full text — many companies list roles in the body, not just the header line
+    if not DESIGN_PATTERN.search(plain):
         return None
     if not REMOTE_PATTERN.search(plain):
         return None
+
+    first_line = plain.split("\n")[0][:200].strip()
 
     # Parse timestamp
     ts = comment.get("time", 0)

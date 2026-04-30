@@ -1,11 +1,110 @@
 [
   {
+    "id": "hn:47603733",
+    "comment_id": 47603733,
+    "thread_title": "Ask HN: Who is hiring? (April 2026)",
+    "first_line": "Oneleet (YC S22) | Multiple Roles | US & NATO Countries | Remote | Full-time",
+    "url": "https://news.ycombinator.com/item?id=47603733",
+    "posted": "2026-04-01",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-04-30"
+  },
+  {
+    "id": "hn:47604429",
+    "comment_id": 47604429,
+    "thread_title": "Ask HN: Who is hiring? (April 2026)",
+    "first_line": "Zed Industries | North America, South America, Europe REMOTE | https://zed.dev/ Zed is a company for developers, by developers. All 3 of our founders have spent years in the trenches writing software",
+    "url": "https://news.ycombinator.com/item?id=47604429",
+    "posted": "2026-04-01",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-04-30"
+  },
+  {
+    "id": "hn:47604168",
+    "comment_id": 47604168,
+    "thread_title": "Ask HN: Who is hiring? (April 2026)",
+    "first_line": "Join ( https://join.build ) | Senior/Staff Software Engineer | Remote | $175K\u2013$205K + equity Join builds collaboration software for the construction industry \u2014 helping contractors, owners, and archite",
+    "url": "https://news.ycombinator.com/item?id=47604168",
+    "posted": "2026-04-01",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-04-30"
+  },
+  {
     "id": "hn:47604915",
     "comment_id": 47604915,
     "thread_title": "Ask HN: Who is hiring? (April 2026)",
     "first_line": "Identity Labs | https://wellfound.com/jobs/4037860-creative-director-at-a-po... | Remote | Full Time Identity Labs has generated 2B+ views across Twitter. We've worked with Bryan Johnson, Chamath Pali",
     "url": "https://news.ycombinator.com/item?id=47604915",
     "posted": "2026-04-01",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-04-30"
+  },
+  {
+    "id": "hn:47613432",
+    "comment_id": 47613432,
+    "thread_title": "Ask HN: Who is hiring? (April 2026)",
+    "first_line": "Checkly | Multiple Roles | REMOTE | Full time | https://www.checklyhq.com/ Checkly helps engineers build reliable products by unifying testing, monitoring and observability. OpenTelemetry, Playwright,",
+    "url": "https://news.ycombinator.com/item?id=47613432",
+    "posted": "2026-04-02",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-04-30"
+  },
+  {
+    "id": "hn:47749158",
+    "comment_id": 47749158,
+    "thread_title": "Ask HN: Who is hiring? (April 2026)",
+    "first_line": "Matcha | REMOTE (Europe / Canada / US) | Full-time | https://matcha.fm Building Matcha and putting together a founding team. If you want to be close to the product, have real ownership, and work with",
+    "url": "https://news.ycombinator.com/item?id=47749158",
+    "posted": "2026-04-13",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-04-30"
+  },
+  {
+    "id": "hn:47710603",
+    "comment_id": 47710603,
+    "thread_title": "Ask HN: Who is hiring? (April 2026)",
+    "first_line": "Coder | https://coder.com/ | Multiple roles | Multiple locations | Full-time Coder is an AI software development company leading the future of autonomous coding. We empower teams to build software fas",
+    "url": "https://news.ycombinator.com/item?id=47710603",
+    "posted": "2026-04-09",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-04-30"
+  },
+  {
+    "id": "hn:47603680",
+    "comment_id": 47603680,
+    "thread_title": "Ask HN: Who is hiring? (April 2026)",
+    "first_line": "HumanSignal | https://humansignal.com/ | REMOTE North America, South America, Europe | Full-time | Engineering roles We created Label Studio ( https://github.com/HumanSignal/label-studio/ ), which has",
+    "url": "https://news.ycombinator.com/item?id=47603680",
+    "posted": "2026-04-01",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-04-30"
+  },
+  {
+    "id": "hn:47601995",
+    "comment_id": 47601995,
+    "thread_title": "Ask HN: Who is hiring? (April 2026)",
+    "first_line": "OpenRent | London, UK | Full-Time | ONSITE+PART REMOTE | https://www.openrent.co.uk What sucked the last time you rented a house or flat? Come and fix it. OpenRent is a force for good in an industry t",
+    "url": "https://news.ycombinator.com/item?id=47601995",
+    "posted": "2026-04-01",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-04-30"
+  },
+  {
+    "id": "hn:47638436",
+    "comment_id": 47638436,
+    "thread_title": "Ask HN: Who is hiring? (April 2026)",
+    "first_line": "Aye Eye is building a privacy-first edge-AI camera platform: local AI, live video, device intelligence, and the app / developer tools around it. We\u2019re hiring for 3 roles Remote (UK/EU preferred): 1) S",
+    "url": "https://news.ycombinator.com/item?id=47638436",
+    "posted": "2026-04-04",
     "remote": true,
     "source": "hackernews",
     "date_scraped": "2026-04-30"
