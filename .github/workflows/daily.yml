@@ -18,8 +18,39 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Python dependencies
         run: pip install requests beautifulsoup4 cloudscraper
+
+      - name: Set up OpenPostings
+        run: |
+          git clone --depth=1 https://github.com/Masterjx9/OpenPostings /tmp/openpostings
+          cd /tmp/openpostings && npm install express cors sqlite sqlite3 --no-save --silent
+          curl -sL -o /tmp/openpostings/jobs.db https://raw.githubusercontent.com/Masterjx9/OpenPostings/main/jobs.db
+          python openpostings_setup.py
+
+      - name: Run OpenPostings sync
+        timeout-minutes: 90
+        run: |
+          cd /tmp/openpostings
+          SYNC_INTERVAL_MS=999999999 SYNC_WORKER_CONCURRENCY=10 node server/index.js &
+          SERVER_PID=$!
+
+          # Wait for server to be ready
+          for i in $(seq 1 30); do
+            if curl -sf http://localhost:8787/sync/status > /dev/null 2>&1; then
+              echo "Server ready after $((i*2))s"; break
+            fi
+            sleep 2
+          done
+
+          # Trigger sync and wait for completion (joins the already-running initial sync)
+          curl -sf -X POST "http://localhost:8787/sync/ats?wait=true" --max-time 5400 || true
+
+          kill $SERVER_PID 2>/dev/null || true
 
       - name: Run scrapers
         run: |
@@ -27,6 +58,7 @@ jobs:
           python scraper_gofractional.py
           python ats_scraper.py
           python scraper_hn.py
+          python scraper_openpostings.py
 
       - name: Commit and push results
         run: |
