@@ -1,5 +1,104 @@
 [
   {
+    "id": "lever:blinkux:9895bbee-49c2-4468-a2fc-514c39677fce",
+    "title": "UI Designer/Developer",
+    "company": "blinkux",
+    "location": "Austin, TX",
+    "remote": false,
+    "employment_type": "contract",
+    "url": "https://jobs.lever.co/blinkux/9895bbee-49c2-4468-a2fc-514c39677fce",
+    "platform": "lever",
+    "date_scraped": "2026-05-01"
+  },
+  {
+    "id": "lever:blinkux:e7ebc206-7bac-4ab1-9c08-bd20937647c0",
+    "title": "UX Designer (Financial Services)",
+    "company": "blinkux",
+    "location": "Wilmington, DE",
+    "remote": false,
+    "employment_type": "contract",
+    "url": "https://jobs.lever.co/blinkux/e7ebc206-7bac-4ab1-9c08-bd20937647c0",
+    "platform": "lever",
+    "date_scraped": "2026-05-01"
+  },
+  {
+    "id": "lever:buckmason:6d01d563-03e4-408c-8b65-7ca7ebcea9d9",
+    "title": "Design Director, Women\u2019s Wovens",
+    "company": "buckmason",
+    "location": "Los Angeles, CA",
+    "remote": false,
+    "employment_type": "full-time",
+    "url": "https://jobs.lever.co/buckmason/6d01d563-03e4-408c-8b65-7ca7ebcea9d9",
+    "platform": "lever",
+    "date_scraped": "2026-05-01"
+  },
+  {
+    "id": "lever:buckmason:003d1e5f-0870-43cb-bc9f-9346c3da9d20",
+    "title": "Photo Production Designer",
+    "company": "buckmason",
+    "location": "Los Angeles, CA",
+    "remote": false,
+    "employment_type": "full-time",
+    "url": "https://jobs.lever.co/buckmason/003d1e5f-0870-43cb-bc9f-9346c3da9d20",
+    "platform": "lever",
+    "date_scraped": "2026-05-01"
+  },
+  {
+    "id": "lever:coupa:86415e53-cf3c-4e2a-be10-441b0d75351a",
+    "title": "Sr. Lead UX Designer - 11490",
+    "company": "coupa",
+    "location": "Mexico City, Mexico",
+    "remote": false,
+    "employment_type": "unknown",
+    "url": "https://jobs.lever.co/coupa/86415e53-cf3c-4e2a-be10-441b0d75351a",
+    "platform": "lever",
+    "date_scraped": "2026-05-01"
+  },
+  {
+    "id": "lever:coupa:86784269-13f1-48c0-a700-8f9f2914b199",
+    "title": "Sr. UX Designer - 11491",
+    "company": "coupa",
+    "location": "Mexico City, Mexico",
+    "remote": false,
+    "employment_type": "unknown",
+    "url": "https://jobs.lever.co/coupa/86784269-13f1-48c0-a700-8f9f2914b199",
+    "platform": "lever",
+    "date_scraped": "2026-05-01"
+  },
+  {
+    "id": "lever:veepee:84d35df2-0972-46d7-b5e0-972f55ee7003",
+    "title": "Lead UX-UI Designer - CDI - (F/M/X)",
+    "company": "veepee",
+    "location": "Paris",
+    "remote": false,
+    "employment_type": "full-time",
+    "url": "https://jobs.lever.co/veepee/84d35df2-0972-46d7-b5e0-972f55ee7003",
+    "platform": "lever",
+    "date_scraped": "2026-05-01"
+  },
+  {
+    "id": "greenhouse:growtherapy:4583852005",
+    "title": "Senior/Staff Product Designer",
+    "company": "growtherapy",
+    "location": "New York City, San Francisco, or Seattle preferred",
+    "remote": false,
+    "employment_type": "unknown",
+    "url": "https://job-boards.greenhouse.io/growtherapy/jobs/4583852005",
+    "platform": "greenhouse",
+    "date_scraped": "2026-05-01"
+  },
+  {
+    "id": "greenhouse:wppmedia:5203132008",
+    "title": "Senior Designer",
+    "company": "wppmedia",
+    "location": "London, United Kingdom",
+    "remote": false,
+    "employment_type": "unknown",
+    "url": "https://job-boards.greenhouse.io/wppmedia/jobs/5203132008",
+    "platform": "greenhouse",
+    "date_scraped": "2026-05-01"
+  },
+  {
     "id": "greenhouse:alphasense:8530664002",
     "title": "Senior/Staff Product Designer",
     "company": "alphasense",
