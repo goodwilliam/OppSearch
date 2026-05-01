@@ -36,11 +36,11 @@ jobs:
           echo "--- writing minimal package.json ---"
           echo '{"name":"op-server","version":"1.0.0","dependencies":{"express":"^5.2.1","cors":"^2.8.6","sqlite":"^5.1.1","sqlite3":"^6.0.1"}}' > /tmp/openpostings/package.json
           echo "--- npm install ---"
-          cd /tmp/openpostings && npm install 2>&1
+          cd /tmp/openpostings && npm install 2>&1 && cd $GITHUB_WORKSPACE
           echo "--- downloading jobs.db ---"
           curl -sL --fail -o /tmp/openpostings/jobs.db https://raw.githubusercontent.com/Masterjx9/OpenPostings/main/jobs.db && echo "jobs.db downloaded OK" || echo "WARNING: jobs.db download failed"
           echo "--- configuring DB ---"
-          python3 openpostings_setup.py
+          python3 $GITHUB_WORKSPACE/openpostings_setup.py
 
       - name: Run OpenPostings sync
         timeout-minutes: 90
