@@ -1,5 +1,71 @@
 [
   {
+    "id": "hn:47975951",
+    "comment_id": 47975951,
+    "thread_title": "Ask HN: Who is hiring? (May 2026)",
+    "first_line": "FUTO | https://futo.tech | Austin, TX | Remote or Onsite | Full Time FUTO is an organization dedicated to developing, both through in-house engineering and investment, technologies that frustrate cent",
+    "url": "https://news.ycombinator.com/item?id=47975951",
+    "posted": "2026-05-01",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-05-01"
+  },
+  {
+    "id": "hn:47979286",
+    "comment_id": 47979286,
+    "thread_title": "Ask HN: Who is hiring? (May 2026)",
+    "first_line": "Cogram (YC W22, https://cogram.com ) | Multiple Roles | Remote or hybrid (US/EU/UK) | Full-time Cogram builds AI agents for architects and engineers. Our tools automate project management and streamli",
+    "url": "https://news.ycombinator.com/item?id=47979286",
+    "posted": "2026-05-01",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-05-01"
+  },
+  {
+    "id": "hn:47978937",
+    "comment_id": 47978937,
+    "thread_title": "Ask HN: Who is hiring? (May 2026)",
+    "first_line": "Railway | Infra Eng-Storage, Infra Eng-Observability, Product Design | REMOTE (Worldwide) | https://railway.com/careers Do you feel scared and alone when opening the AWS console? Do you wish you could",
+    "url": "https://news.ycombinator.com/item?id=47978937",
+    "posted": "2026-05-01",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-05-01"
+  },
+  {
+    "id": "hn:47976189",
+    "comment_id": 47976189,
+    "thread_title": "Ask HN: Who is hiring? (May 2026)",
+    "first_line": "Join ( https://join.build ) | Staff Software Engineer | Remote | $175K\u2013$205K + equity",
+    "url": "https://news.ycombinator.com/item?id=47976189",
+    "posted": "2026-05-01",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-05-01"
+  },
+  {
+    "id": "hn:47978393",
+    "comment_id": 47978393,
+    "thread_title": "Ask HN: Who is hiring? (May 2026)",
+    "first_line": "E2B | SF, Prague, Remote | Eng, GTM, and Operations | https://e2b.dev/ E2B is building infrastructure for AI agents, and has quickly become the open source standard for agentic workflow sandboxes. Cus",
+    "url": "https://news.ycombinator.com/item?id=47978393",
+    "posted": "2026-05-01",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-05-01"
+  },
+  {
+    "id": "hn:47975610",
+    "comment_id": 47975610,
+    "thread_title": "Ask HN: Who is hiring? (May 2026)",
+    "first_line": "We The Flywheel | Remote (Worldwide) / Ho Chi Minh City (Hybrid) | Part-time | https://wetheflywheel.com We are a global media network, digital consultancy, and product studio focused on helping compa",
+    "url": "https://news.ycombinator.com/item?id=47975610",
+    "posted": "2026-05-01",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-05-01"
+  },
+  {
     "id": "hn:47603733",
     "comment_id": 47603733,
     "thread_title": "Ask HN: Who is hiring? (April 2026)",
