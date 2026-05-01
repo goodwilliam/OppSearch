@@ -20,7 +20,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
 
       - name: Install Python dependencies
         run: pip install requests beautifulsoup4 cloudscraper
@@ -28,9 +28,11 @@ jobs:
       - name: Set up OpenPostings
         run: |
           git clone --depth=1 https://github.com/Masterjx9/OpenPostings /tmp/openpostings
-          cd /tmp/openpostings && npm install express cors sqlite sqlite3 --no-save --silent
+          # Replace the full React Native package.json with minimal server-only deps
+          echo '{"name":"op-server","version":"1.0.0","dependencies":{"express":"^5.2.1","cors":"^2.8.6","sqlite":"^5.1.1","sqlite3":"^6.0.1"}}' > /tmp/openpostings/package.json
+          cd /tmp/openpostings && npm install
           curl -sL -o /tmp/openpostings/jobs.db https://raw.githubusercontent.com/Masterjx9/OpenPostings/main/jobs.db
-          python openpostings_setup.py
+          python3 openpostings_setup.py
 
       - name: Run OpenPostings sync
         timeout-minutes: 90
@@ -39,26 +41,26 @@ jobs:
           SYNC_INTERVAL_MS=999999999 SYNC_WORKER_CONCURRENCY=10 node server/index.js &
           SERVER_PID=$!
 
-          # Wait for server to be ready
+          # Wait for server to be ready (up to 60s)
           for i in $(seq 1 30); do
+            sleep 2
             if curl -sf http://localhost:8787/sync/status > /dev/null 2>&1; then
               echo "Server ready after $((i*2))s"; break
             fi
-            sleep 2
           done
 
-          # Trigger sync and wait for completion (joins the already-running initial sync)
+          # Trigger sync and wait for completion
           curl -sf -X POST "http://localhost:8787/sync/ats?wait=true" --max-time 5400 || true
 
           kill $SERVER_PID 2>/dev/null || true
 
       - name: Run scrapers
         run: |
-          python scraper.py
-          python scraper_gofractional.py
-          python ats_scraper.py
-          python scraper_hn.py
-          python scraper_openpostings.py
+          python3 scraper.py
+          python3 scraper_gofractional.py
+          python3 ats_scraper.py
+          python3 scraper_hn.py
+          python3 scraper_openpostings.py
 
       - name: Commit and push results
         run: |
