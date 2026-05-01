@@ -13,6 +13,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - uses: actions/setup-python@v5
         with:
@@ -21,38 +23,57 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "24"
+        env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
       - name: Install Python dependencies
         run: pip install requests beautifulsoup4 cloudscraper
 
       - name: Set up OpenPostings
         run: |
+          echo "--- cloning OpenPostings ---"
           git clone --depth=1 https://github.com/Masterjx9/OpenPostings /tmp/openpostings
-          # Replace the full React Native package.json with minimal server-only deps
+          echo "--- writing minimal package.json ---"
           echo '{"name":"op-server","version":"1.0.0","dependencies":{"express":"^5.2.1","cors":"^2.8.6","sqlite":"^5.1.1","sqlite3":"^6.0.1"}}' > /tmp/openpostings/package.json
-          cd /tmp/openpostings && npm install
-          curl -sL -o /tmp/openpostings/jobs.db https://raw.githubusercontent.com/Masterjx9/OpenPostings/main/jobs.db
+          echo "--- npm install ---"
+          cd /tmp/openpostings && npm install 2>&1
+          echo "--- downloading jobs.db ---"
+          curl -sL --fail -o /tmp/openpostings/jobs.db https://raw.githubusercontent.com/Masterjx9/OpenPostings/main/jobs.db && echo "jobs.db downloaded OK" || echo "WARNING: jobs.db download failed"
+          echo "--- configuring DB ---"
           python3 openpostings_setup.py
 
       - name: Run OpenPostings sync
         timeout-minutes: 90
         run: |
+          echo "--- starting server ---"
           cd /tmp/openpostings
-          SYNC_INTERVAL_MS=999999999 SYNC_WORKER_CONCURRENCY=10 node server/index.js &
+          SYNC_INTERVAL_MS=999999999 SYNC_WORKER_CONCURRENCY=10 node server/index.js > /tmp/op-server.log 2>&1 &
           SERVER_PID=$!
+          echo "Server PID: $SERVER_PID"
 
           # Wait for server to be ready (up to 60s)
+          READY=0
           for i in $(seq 1 30); do
             sleep 2
             if curl -sf http://localhost:8787/sync/status > /dev/null 2>&1; then
-              echo "Server ready after $((i*2))s"; break
+              echo "Server ready after $((i*2))s"
+              READY=1
+              break
             fi
           done
 
-          # Trigger sync and wait for completion
-          curl -sf -X POST "http://localhost:8787/sync/ats?wait=true" --max-time 5400 || true
+          if [ "$READY" = "0" ]; then
+            echo "Server failed to start. Last log output:"
+            tail -30 /tmp/op-server.log
+            kill $SERVER_PID 2>/dev/null || true
+            exit 1
+          fi
+
+          echo "--- triggering sync (wait=true) ---"
+          curl -sf -X POST "http://localhost:8787/sync/ats?wait=true" --max-time 5400 && echo "Sync complete" || echo "Sync timed out or errored (continuing)"
 
           kill $SERVER_PID 2>/dev/null || true
+          echo "--- server stopped ---"
 
       - name: Run scrapers
         run: |
