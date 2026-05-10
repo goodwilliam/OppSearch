@@ -1,5 +1,77 @@
 [
   {
+    "id": "op:https://boards.greenhouse.io/glossgenius/jobs/7728313003",
+    "title": "Staff Product Designer",
+    "company": "imaginary",
+    "url": "https://boards.greenhouse.io/glossgenius/jobs/7728313003",
+    "date_scraped": "1778364112",
+    "employment_type": "unknown",
+    "location": "",
+    "remote": false,
+    "platform": "greenhouse",
+    "source": "openpostings"
+  },
+  {
+    "id": "op:https://wellfound.com/company/trysubject/jobs/4192059-game-designer",
+    "title": "Game Designer",
+    "company": "hannahgrey",
+    "url": "https://wellfound.com/company/trysubject/jobs/4192059-game-designer",
+    "date_scraped": "1778366968",
+    "employment_type": "unknown",
+    "location": "",
+    "remote": false,
+    "platform": "other",
+    "source": "openpostings"
+  },
+  {
+    "id": "op:https://wk.wd3.myworkdayjobs.com/external/job/USA---Coppell-TX/CX-UX-Designer--Tax---Accounting----Hybrid--R0056839_R0056839-1",
+    "title": "CX/UX Designer (Tax & Accounting) - Hybrid (TX/KS/NJ/FL/GA/NY/IL) R0056839",
+    "company": "wk",
+    "url": "https://wk.wd3.myworkdayjobs.com/external/job/USA---Coppell-TX/CX-UX-Designer--Tax---Accounting----Hybrid--R0056839_R0056839-1",
+    "date_scraped": "Posted Today",
+    "employment_type": "unknown",
+    "location": "",
+    "remote": false,
+    "platform": "other",
+    "source": "openpostings"
+  },
+  {
+    "id": "op:https://jobs.lever.co/blinq/e6ffbe3c-0c75-4e22-afb0-c4633fba2986",
+    "title": "Senior Brand Designer",
+    "company": "squarepeg",
+    "url": "https://jobs.lever.co/blinq/e6ffbe3c-0c75-4e22-afb0-c4633fba2986",
+    "date_scraped": "1778373623",
+    "employment_type": "unknown",
+    "location": "",
+    "remote": false,
+    "platform": "lever",
+    "source": "openpostings"
+  },
+  {
+    "id": "op:https://wk.wd3.myworkdayjobs.com/External/job/USA---Coppell-TX/CX-UX-Designer--Tax---Accounting----Hybrid--R0056839_R0056839-1",
+    "title": "CX/UX Designer (Tax & Accounting) - Hybrid (TX/KS/NJ/FL/GA/NY/IL) R0056839",
+    "company": "wk",
+    "url": "https://wk.wd3.myworkdayjobs.com/External/job/USA---Coppell-TX/CX-UX-Designer--Tax---Accounting----Hybrid--R0056839_R0056839-1",
+    "date_scraped": "Posted Today",
+    "employment_type": "unknown",
+    "location": "",
+    "remote": false,
+    "platform": "other",
+    "source": "openpostings"
+  },
+  {
+    "id": "op:https://careers-compsych.icims.com/jobs/2126/design-lead/job?in_iframe=1",
+    "title": "Design Lead",
+    "company": "careers-compsych",
+    "url": "https://careers-compsych.icims.com/jobs/2126/design-lead/job?in_iframe=1",
+    "date_scraped": "2026-05-10",
+    "employment_type": "unknown",
+    "location": "",
+    "remote": false,
+    "platform": "other",
+    "source": "openpostings"
+  },
+  {
     "id": "op:https://jobs.smartrecruiters.com/BoschGroup/744000125450039-system-engineer-designer-control-sensing-em",
     "title": "System Engineer (Designer)-Control & Sensing/ \u7cfb\u7edf\u5de5\u7a0b\u5e08\uff08\u8bbe\u8ba1\u65b9\u5411)-\u63a7\u5236\u4e0e\u4f20\u611f_EM",
     "company": "Bosch Group",
