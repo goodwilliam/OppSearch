@@ -1,5 +1,93 @@
 [
   {
+    "id": "hn:48363323",
+    "comment_id": 48363323,
+    "thread_title": "Ask HN: Who is hiring? (June 2026)",
+    "first_line": "Runway | Multiple Engineering & Research roles | Remote (global) | Full-time Runway is building AI to simulate the world \u2014 merging art and science. We're a team of researchers, engineers, artists, and",
+    "url": "https://news.ycombinator.com/item?id=48363323",
+    "posted": "2026-06-01",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-06-02"
+  },
+  {
+    "id": "hn:48371423",
+    "comment_id": 48371423,
+    "thread_title": "Ask HN: Who is hiring? (June 2026)",
+    "first_line": "Lago ( https://getlago.com/ ) | Hiring in Paris and remote in wider Europe and Americas for various roles | Hiring across product, engineering and GTM The Open Source, AI-native billing platform - Lag",
+    "url": "https://news.ycombinator.com/item?id=48371423",
+    "posted": "2026-06-02",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-06-02"
+  },
+  {
+    "id": "hn:48360245",
+    "comment_id": 48360245,
+    "thread_title": "Ask HN: Who is hiring? (June 2026)",
+    "first_line": "YNAB | Senior iOS Engineer | Remote (US) | Full-time | $145-$190k + profit-sharing bonuses YNAB is a product company with a mission: to help people get good at money so they never worry about money ag",
+    "url": "https://news.ycombinator.com/item?id=48360245",
+    "posted": "2026-06-01",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-06-02"
+  },
+  {
+    "id": "hn:48357754",
+    "comment_id": 48357754,
+    "thread_title": "Ask HN: Who is hiring? (June 2026)",
+    "first_line": "Go.Shop | Product Builder \u2014 Growth Channels | Remote (GMT to GMT+8, London travel) | REMOTE Go.Shop is the AI-powered platform enabling creators to build and scale consumer product brands \u2014 the infras",
+    "url": "https://news.ycombinator.com/item?id=48357754",
+    "posted": "2026-06-01",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-06-02"
+  },
+  {
+    "id": "hn:48361618",
+    "comment_id": 48361618,
+    "thread_title": "Ask HN: Who is hiring? (June 2026)",
+    "first_line": "Riot IQ | Software Engineers, Product Designers, AI Native Fresh Grads | Seattle, WA | REMOTE (US) | Full time | https://riotiq.com I'm Robert, cofounder of Riot IQ. We're building RIOT IQ, a professi",
+    "url": "https://news.ycombinator.com/item?id=48361618",
+    "posted": "2026-06-01",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-06-02"
+  },
+  {
+    "id": "hn:48359172",
+    "comment_id": 48359172,
+    "thread_title": "Ask HN: Who is hiring? (June 2026)",
+    "first_line": "FUTO | https://futo.tech | Austin, TX | Remote or Onsite | Full Time FUTO is an organization dedicated to developing, both through in-house engineering and investment, technologies that frustrate cent",
+    "url": "https://news.ycombinator.com/item?id=48359172",
+    "posted": "2026-06-01",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-06-02"
+  },
+  {
+    "id": "hn:48361035",
+    "comment_id": 48361035,
+    "thread_title": "Ask HN: Who is hiring? (June 2026)",
+    "first_line": "Railway | Infra Eng-Storage, Infra Eng-Observability, Product Design, Infra Eng-General, Product Eng (full-stack) | REMOTE (Worldwide) | https://railway.com/careers Do you feel scared and alone when o",
+    "url": "https://news.ycombinator.com/item?id=48361035",
+    "posted": "2026-06-01",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-06-02"
+  },
+  {
+    "id": "hn:48358820",
+    "comment_id": 48358820,
+    "thread_title": "Ask HN: Who is hiring? (June 2026)",
+    "first_line": "Baton | San Francisco, CA (Hybrid) and Remote | Full-Time",
+    "url": "https://news.ycombinator.com/item?id=48358820",
+    "posted": "2026-06-01",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-06-02"
+  },
+  {
     "id": "hn:48102189",
     "comment_id": 48102189,
     "thread_title": "Ask HN: Who is hiring? (May 2026)",
