@@ -43,7 +43,7 @@ jobs:
           python3 $GITHUB_WORKSPACE/openpostings_setup.py
 
       - name: Run OpenPostings sync
-        timeout-minutes: 90
+        timeout-minutes: 30
         run: |
           echo "--- starting server ---"
           cd /tmp/openpostings
@@ -65,14 +65,25 @@ jobs:
           if [ "$READY" = "0" ]; then
             echo "Server failed to start. Last log output:"
             tail -30 /tmp/op-server.log
-            kill $SERVER_PID 2>/dev/null || true
+            pkill -9 -f "node server/index.js" 2>/dev/null || true
             exit 1
           fi
 
-          echo "--- triggering sync (wait=true) ---"
-          curl -sf -X POST "http://localhost:8787/sync/ats?wait=true" --max-time 5400 && echo "Sync complete" || echo "Sync timed out or errored (continuing)"
+          echo "--- triggering sync (fire and forget) ---"
+          curl -sf -X POST "http://localhost:8787/sync/ats" --max-time 30 && echo "Sync triggered" || echo "Sync trigger failed (continuing)"
 
-          kill $SERVER_PID 2>/dev/null || true
+          echo "--- waiting up to 20 min for sync ---"
+          for i in $(seq 1 40); do
+            sleep 30
+            STATUS=$(curl -sf http://localhost:8787/sync/status 2>/dev/null || echo "")
+            echo "[$((i*30))s] status: $STATUS"
+            if echo "$STATUS" | grep -q '"syncing":false'; then
+              echo "Sync finished early at $((i*30))s"
+              break
+            fi
+          done
+
+          pkill -9 -f "node server/index.js" 2>/dev/null || true
           echo "--- server stopped ---"
 
       - name: Run scrapers
