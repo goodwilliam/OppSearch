@@ -1,5 +1,35 @@
 [
   {
+    "slug": "product-lead-at-a-mental-health-marketplace",
+    "url": "https://www.fractionaljobs.io/jobs/product-lead-at-a-mental-health-marketplace",
+    "title": "Product Lead",
+    "company": "A Mental Health Marketplace",
+    "category": "Product",
+    "hours": "10 hrs",
+    "rate": "$5,000 / mo",
+    "location": "Remote (USA / Canada only)",
+    "remote": true,
+    "posted": "July 1, 2026",
+    "source": "fractionaljobs",
+    "date_scraped": "2026-07-01",
+    "flagged": false
+  },
+  {
+    "slug": "controller-at-an-ai-native-accounting-firm",
+    "url": "https://www.fractionaljobs.io/jobs/controller-at-an-ai-native-accounting-firm",
+    "title": "Controller",
+    "company": "An AI-native Accounting Firm",
+    "category": "Finance",
+    "hours": "10 hrs",
+    "rate": "$5K - $6.5K / mo",
+    "location": "Remote (USA only)",
+    "remote": true,
+    "posted": "June 30, 2026",
+    "source": "fractionaljobs",
+    "date_scraped": "2026-07-01",
+    "flagged": false
+  },
+  {
     "slug": "ashbyhq-ux-product-researcher-6-month-contract-bounce-jobs",
     "url": "https://www.gofractional.com/job/ashbyhq-ux-product-researcher-6-month-contract-bounce-jobs",
     "title": "UX/Product Researcher",
