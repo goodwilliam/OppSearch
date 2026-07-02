@@ -1,5 +1,38 @@
 [
   {
+    "id": "hn:48758289",
+    "comment_id": 48758289,
+    "thread_title": "Ask HN: Who is hiring? (July 2026)",
+    "first_line": "Lago ( https://getlago.com/ )(YCS21) | Hiring in Paris and REMOTE in wider Europe | Hiring across product, engineering and GTM The Open Source, AI-native billing platform - Lago is the billing platfor",
+    "url": "https://news.ycombinator.com/item?id=48758289",
+    "posted": "2026-07-02",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-07-02"
+  },
+  {
+    "id": "hn:48754441",
+    "comment_id": 48754441,
+    "thread_title": "Ask HN: Who is hiring? (July 2026)",
+    "first_line": "Railway | Infra Eng-Storage, Infra Eng-Observability, Brand Designer - Web, Infra Eng-General, Product Eng (full-stack) | REMOTE (Worldwide) | https://railway.com/careers Do you feel scared and alone",
+    "url": "https://news.ycombinator.com/item?id=48754441",
+    "posted": "2026-07-01",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-07-02"
+  },
+  {
+    "id": "hn:48748226",
+    "comment_id": 48748226,
+    "thread_title": "Ask HN: Who is hiring? (July 2026)",
+    "first_line": "Ontix | Technical Product Manager | Remote (US) Hi! We're Ontix. Among other things, we're building the business layer to connect siloed datasets and query them with natural language, offering insight",
+    "url": "https://news.ycombinator.com/item?id=48748226",
+    "posted": "2026-07-01",
+    "remote": true,
+    "source": "hackernews",
+    "date_scraped": "2026-07-02"
+  },
+  {
     "id": "hn:48363323",
     "comment_id": 48363323,
     "thread_title": "Ask HN: Who is hiring? (June 2026)",
